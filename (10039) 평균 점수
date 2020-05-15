@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+	int s[5];
+	scanf("%d\n%d\n%d\n%d\n%d", &s[0], &s[1], &s[2], &s[3], &s[4]);
+
+	for (int i = 0; i < 5; i++)
+	{
+		if (s[i] < 40)
+			s[i] = 40;
+	}
+
+	int average = (s[0] + s[1] + s[2] + s[3] + s[4]) / 5;
+
+	printf("%d", average);
+
+	return 0;
+}
