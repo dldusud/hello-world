@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+	int Burger[3], Drink[2];
+	scanf("%d\n%d\n%d\n%d\n%d", &Burger[0], &Burger[1], &Burger[2], &Drink[0], &Drink[1]);
+
+	int mBurger, mDrink;
+
+	if (Burger[0] <= Burger[1] && Burger[0] <= Burger[2])
+		mBurger = Burger[0];
+	else if (Burger[1] <= Burger[0] && Burger[1] <= Burger[2])
+		mBurger = Burger[1];
+	else if (Burger[2] <= Burger[0] && Burger[2] <= Burger[1])
+		mBurger = Burger[2];
+
+	if (Drink[0] < Drink[1])
+		mDrink = Drink[0];
+	else
+		mDrink = Drink[1];
+
+	printf("%d", mBurger + mDrink - 50);
+
+	return 0;
+}
