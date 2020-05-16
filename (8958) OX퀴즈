@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int T = 0;
+    
+    scanf("%d", &T);
+    
+    for(int i = 0; i < T; i++)
+    {
+        char OX[81] = {0,};
+        int score = 0, total = 0;
+        scanf("%s", &OX);
+        
+        for(int j = 0; j < 81; j++)
+        {
+            if(OX[j] == 'O')
+            {
+                score += 1;
+                total += score;
+            }
+            else if(OX[j] == 'X')
+                score = 0;
+            else if(OX[j] == 0)
+                break;
+                
+        }
+        
+        printf("%d\n", total);
+        
+    }
+    
+    return 0;
+    
+}
