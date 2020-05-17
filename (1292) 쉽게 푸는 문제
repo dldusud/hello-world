@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int s[1000000] = {0,}, index = 0, start, fin, total = 0;
+    
+    for(int i = 0; i < 1001; i++)
+    {
+        for(int j = 0; j < i; j++)
+        {
+            s[index] = i;
+            index++;
+        }
+    }
+    
+    scanf("%d %d", &start, &fin);
+    
+    for(int i = start - 1; i < fin; i++)
+        total += s[i];
+    
+    printf("%d\n", total);
+    
+    return 0;
+}
