@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    char mail[1001] = {0,};
+    
+    scanf("%s", &mail);
+        
+    for(int i = 0; i < 1001; i++)
+    {
+        if(mail[i] != 0)
+        {
+            if(mail[i] == 'A' || mail[i] == 'B' || mail[i] == 'C')
+                printf("%c", mail[i] + 23);
+            else
+                printf("%c", mail[i] - 3);
+        }
+        else
+            break;
+    }
+    
+    printf("\n");
+    
+    return 0;
+}
